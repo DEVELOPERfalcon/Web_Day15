@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!-- table, image, card, collapse, carousel(컨베이어 - 순환) -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Container</title>
+
+        <!-- 부트스트랩 라이브러리 추가: CDN 방식 (w3schools.com 방식 ) -->
+        <!-- 1. https://www.w3schools.com/ 접속 -->
+        <!-- 2. 왼쪽 메뉴의 [Learn Bootstrap] 클릭 -->
+        <!-- 3. B4 버전 클릭 -->
+        <!-- 4. 왼쪽메뉴에서 [BS4 Get Started] 클릭 -->
+        <!-- 5. [Bootstrap 4 CDN] 단락에서 MaxCDN: 라고 되어있는 코드 복사 해서 <head>에 붙여넣기 -->
+
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    </head>
+    <body>
+        <!-- 요소들의 배치에 대한 연습 -->
+        <!-- block요소를 사용할 때 -->
+        <!-- 기본적으로 부트스트랩을 적용하면 요소의 기본 padding과 margin에 영향을 줌. 화면끝에 딱 붙어서 나옴 -->
+        <h2 style="background-color: burlywood;">this is headding elements</h2>
+        <p style="background-color: cadetblue;">this is pragraphy element</p>
+
+        <!-- 가로가 너무길면 이쁘기 않음. 그래서 일반적으로 가로사이즈를 980px(모바일 뷰포트 값)로 지정 -->
+        <div style="width: 980px;">
+            <h2 style="background-color: burlywood;">this is headding elements</h2>
+            <p style="background-color: cadetblue;">this is pragraphy element</p>
+        </div>
+
+        <!-- 가로사이즈를 940px(좌우 여백 고려)로 하고 가운데정렬까지 해주는 style -->
+        <div class="container">
+            <h2 style="background-color: burlywood;">this is headding elements</h2>
+            <p style="background-color: cadetblue;">this is pragraphy element</p>
+        </div>
+
+        <div class="container">
+            <!-- 한줄로 배치시키기 -->
+            <div class="row">
+                <h2>Hello</h2>
+                <p>Nice</p>
+
+                <!-- 인라인요소: 원래 인라인요소는 사이즈 조절이 안됨. 하지만 class="row" 안에 위치하면 inline-block이 되어 사이즈조절이 가능 -->
+                <!-- row를 사용하면 container의 padding 좌우 여백이 없어짐 -->
+                <button>aaa</button>
+                <a href="#" style="width: 200px; background-color: lightgreen;">google</a>
+            </div>
+
+            <!-- row안의 요소들을 균등분할 -->
+            <!-- row안의 칸의 개수를 12개(무조건)로 계산하여 사이즈 지정하기 -->
+            <div class="row mt-5">
+                <div class="col-md-4" style="background-color: lightgreen;">left</div>
+                <div class="col-md-4" style="background-color: yellow;">center</div>
+                <div class="col-md-4" style="background-color: gray;">right</div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-3" style="background-color: lightgreen;">left</div>
+                <div class="col-md-3" style="background-color: yellow;">center</div>
+                <div class="col-md-3" style="background-color: gray;">right</div>
+            </div>
+            <!-- md, sm은 요소의 크기를 말하는 것이 아니라, 반응형의 기준사이즈를 의미함(md:태블릿, sm:모바일) -->
+            <div class="row mt-5">
+                <div class="col-sm-4" style="background-color: lightgreen;">left</div>
+                <div class="col-sm-4" style="background-color: yellow;">center</div>
+                <div class="col-sm-4" style="background-color: gray;">right</div>
+            </div>
+
+        </div>
+
+        <!-- container는 최대 940px 이상 커지지 않음 -->
+        <!-- 한계를 주지 않되 좌우여백은 주고 싶다면 -->
+        <div class="container-fluid">
+            <h2 style="background-color: burlywood;">this is headding elements</h2>
+            <p style="background-color: cadetblue;">this is pragraphy element</p>
+        </div>
+    </body>
+</html>

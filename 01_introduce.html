@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Bootstrap 사용하는 방법 공부하기
+     1. https://getbootstrap.com/ 접속 또는 네이버에서 bootstrap 검색 후 부트스트랩(getbootstrap.com) 접속
+     2. 메인화면에서 Get started 버튼 클릭
+     3. 왼쪽 메뉴에서 원하는 메뉴 클릭 -->
+
+<!-- Bootstrap 사용방법 - 다운로드 방식
+     1. https://getbootstrap.com/ 접속 또는 네이버에서 bootstrap 검색 후 부트스트랩(getbootstrap.com) 접속
+     2. 메인화면에서 Download버튼 클릭
+     3. Compiled CSS and JS 단락의 다룬로드 버튼 클릭
+     4. bootstrap-4.4.1-dist 압축풀기
+     5. bootstrap-4.4.1-dist의 css 폴더 안에서 bootstrap.css파일 복사해서 원하는 곳에 붙여넣기
+     6. bootstrap-4.4.1-dist의 js 폴더 안에서 bootstrap.js파일 복사해서 원하는 곳에 붙여넣기
+     7. <head>에서 <link>로 bootstrap.css파일 사용( ex -> <link rel="stylesheet" href="./css/bootstrap.css"> )
+     8. <head>에서 <script>로 jQuery라이브러리 추가( ex -> <script src="./js/jquery-3.4.1.min.js"></script> )
+     9. <head>에서 <script>로 bootstrap.js파일 사용( ex -> <script src="./js/bootstrap.js"></script> ) -->
+
+<!-- Bootstrap 사용방법 - CDN 방식
+     1. https://getbootstrap.com/ 접속 또는 네이버에서 bootstrap 검색 후 부트스트랩(getbootstrap.com) 접속
+     2. 메인화면에서 Download버튼 클릭
+     3. BootstrapCDN 단락 따라하기
+     4. ex. 아래처럼 순서에 유의하며 사용
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Bootstrap</title>
+        <!-- Bootstrap은 jquery와 사용하는 방법이 거의 같음 -->
+
+        <!-- 라이브러리 적용방법 -->
+        <!-- 1. 다운로드 방식, 2. CDN 방식-->
+        <!-- 기본적으로 추가할 문서는 3개 -->
+        <!-- 1-1) 부트스트랩의 css문서 (bootstrap.css) -->
+        <link rel="stylesheet" href="./css/bootstrap.css">
+        <!-- 1-2) jQuery 라이브러리 (jquery.js): 부트스트랩의 기능들이 jquery를 기반으로 만들어져있어서 필요 --> 
+        <script src="./js/jquery-3.4.1.min.js"></script>
+        <!-- 1-3) 부트스트랩의 js문서 (bootstrap.js): 반드시 jquery라이브러리 다음에 위치해야 함(위치 바뀌면 동작안함) -->
+        <script src="./js/bootstrap.js"></script>
+
+    </head>
+    <body>
+        <!-- bootstrap적용하기: 이미 css에 클래스 선택자를 통해 각각의 스타일 코드들이 작성되어 있으므로, 해당하는 클래스를 요소에 지정해 주기만하면 적용됨 -->
+        <button class="btn btn-primary">Button</button>
+
+        <!-- bootstrap 라이브러리의 대략적 사용 알아보기 -->
+        <!-- 1) 벽에 붙어있어서 보기 별로므로 div안에 버튼 넣어 사용 -->
+        <div class="container" style="padding-top: 16px; text-align: center;"> <!-- 별도로 원하는 style 적용가능 --> 
+            <button class="btn btn-primary">button</button>
+            <button class="btn btn-secondary">button</button>
+            <button class="btn btn-success">button</button>
+        </div>
+
+        <!-- 가장많이 사용하는 테이블작업도 수월하게 -->
+        <table class="table table-hover mt-3">
+            <tr>
+                <th>no</th>
+                <th>name</th>
+                <th>message</th>
+                <th>date</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sam</td>
+                <td>Hello bootstrap</td>
+                <td>2019.12.23</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>robin</td>
+                <td>Nice to meet you</td>
+                <td>2019.12.24</td>
+            </tr>
+        </table>
+        <hr>
+        <!-- pagination을 주면 -->
+        <ul class="pagination justify-content-center">
+            <li class="page-item"><a href="" class="page-link">1</a></li>
+            <li class="page-item"><a href="" class="page-link">2</a></li>
+            <li class="page-item"><a href="" class="page-link">3</a></li>
+            <li class="page-item"><a href="" class="page-link">4</a></li>
+        </ul>
+
+        <hr>
+
+        <!-- 쇼핑몰 같은 곳에서 자주보는 Card형태의 컴포넌트 -->
+        <div class="card ml-3" style="width: 20rem;"> <!-- rem: em처럼 기본 글씨기반으로 한 사이즈여도, em하고 다르게 최상위 컨테이너의 글씨크기릴 기반 -->
+            <img class="card-img-top" src="./images/f001.png">
+            <div class="card-body">
+                <h5 class="card-title">image1</h5>
+                <p class="card-text">케릭터 이미지</p>
+                <a href="#" class="btn btn-primary">Go image</a>
+            </div>
+        </div>
+        <div class="card ml-3" style="width: 20rem;"> <!-- rem: em처럼 기본 글씨기반으로 한 사이즈여도, em하고 다르게 최상위 컨테이너의 글씨크기릴 기반 -->
+            <img class="card-img-top" src="./images/f009.png">
+            <div class="card-body">
+                <h5 class="card-title">image9</h5>
+                <p class="card-text">케릭터 이미지</p>
+                <a href="#" class="btn btn-primary">Go image</a>
+            </div>
+        </div>
+
+        <hr>
+        <!-- 옆으로 card들을 배치하고자 한다면 -->
+        <div class="container mt-3">
+            <div class="row">   <!-- row: 수평배치 -->
+                <div class="card ml-3" style="width: 20rem;"> <!-- rem: em처럼 기본 글씨기반으로 한 사이즈여도, em하고 다르게 최상위 컨테이너의 글씨크기릴 기반 -->
+                    <img class="card-img-top" src="./images/f001.png">
+                    <div class="card-body">
+                        <h5 class="card-title">image1</h5>
+                        <p class="card-text">케릭터 이미지</p>
+                        <a href="#" class="btn btn-primary">Go image</a>
+                    </div>
+                </div>
+                <div class="card ml-3" style="width: 20rem;"> <!-- rem: em처럼 기본 글씨기반으로 한 사이즈여도, em하고 다르게 최상위 컨테이너의 글씨크기릴 기반 -->
+                    <img class="card-img-top" src="./images/f009.png">
+                    <div class="card-body">
+                        <h5 class="card-title">image9</h5>
+                        <p class="card-text">케릭터 이미지</p>
+                        <a href="#" class="btn btn-primary">Go image</a>
+                    </div>
+                </div>
+                <div class="card ml-3" style="width: 20rem;"> <!-- rem: em처럼 기본 글씨기반으로 한 사이즈여도, em하고 다르게 최상위 컨테이너의 글씨크기릴 기반 -->
+                    <img class="card-img-top" src="./images/f017.png">
+                    <div class="card-body">
+                        <h5 class="card-title">image17</h5>
+                        <p class="card-text">케릭터 이미지</p>
+                        <a href="#" class="btn btn-primary">Go image</a>
+                    </div>
+                </div>
+                <div class="card ml-3" style="width: 20rem;"> <!-- rem: em처럼 기본 글씨 크기를 기반으로 한 사이즈여도, em하고 다르게 최상위 컨테이너의 글씨크기릴 기반 -->
+                    <img class="card-img-top" src="./images/f025.png">
+                    <div class="card-body">
+                        <h5 class="card-title">image25</h5>
+                        <p class="card-text">케릭터 이미지</p>
+                        <a href="#" class="btn btn-primary">Go image</a>
+                    </div>
+                </div>
+                <div class="card ml-3" style="width: 20rem;">
+                    <img class="card-img-top" src="./images/f033.png">
+                    <div class="card-body">
+                        <h5 class="card-title">image33</h5>
+                        <p class="card-text">케릭터 이미지</p>
+                        <a href="#" class="btn btn-primary">Go image</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
